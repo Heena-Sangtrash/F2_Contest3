@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <title>Live cryptocurrency Updates</title>
+</head>
+<body>
+    <main class="container">
+        <div class="input-section">
+            <h2>CryptoTracker</h2>
+            <ul class="nav-top">
+                <li>Home</li>
+                <li>Compare</li>
+                <li>Watchlist</li>
+                <li>Dashboard</li>
+            </ul>
+           
+        </div>
+        <div>
+            <!-- Buttons to choose list or grid view -->
+        <button class ="grid-card" onclick="gridView()"> Grid</button>
+<button class="list-card" onclick="listView()"> List</button>
+
+        </div>
+        
+        <div class="table-section">
+            <table id="table-data">
+               <tbody>
+                <!-- To test the UI before taking the data from API -->
+                <!-- <div class="row"> -->
+                    <tr class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579" 
+                            alt="coin-logo"></td>
+                        <td class="td-name">Bitcoin</td>
+                        <td class="td-shortName">BTC</td>
+                        <td class="td-per">3.79%</td>
+                        <td class="td-price">$20023</td>
+                        <td class="td-price1">28,534,462,145</td>
+                        
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880"
+                             alt="coin-logo"></td>
+                        <td class="td-name">Ethereum</td>
+                        <td class="td-shortName">ETH</td>
+                        <td class="td-per">3.48%</td>
+                        <td class="td-price">$13543.77</td>
+                        <td class="td-price1">9,002,850,028</td>
+                       
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/325/large/Tether.png?1668148663" 
+                            alt="coin-logo"></td>
+                        <td class="td-name">Tether</td>
+                        <td class="td-shortName">USDT</td>
+                        <td class="td-per">-0.03%</td>
+                        <td class="td-price">$1.001</td>
+                        <td class="td-price1">33,471,352,657</td>
+                        
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png?1644979850"
+                             alt="coin-logo"></td>
+                        <td class="td-name">BNB</td>
+                        <td class="td-shortName">BNB</td>
+                        <td class="td-per">2.19%</td>
+                        <td class="td-price">$293.02</td>
+                        <td class="td-price1">362,136,764</td>
+                        
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+                <!-- </div> -->
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png?1547042389" 
+                            alt="coin-logo"></td>
+                        <td class="td-name">USD Coin</td>
+                        <td class="td-shortName">USDC</td>
+                        <td class="td-per">3.79%</td>
+                        <td class="td-price">$1</td>
+                        <td class="td-price1">3,277,542,643</td>
+                        
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731"
+                             alt="coin-logo"></td>
+                        <td class="td-name">XRP</td>
+                        <td class="td-shortName">XRP</td>
+                        <td class="td-per">4.98%</td>
+                        <td class="td-price">$0.474016</td>
+                        <td class="td-price1">1,839,526,667</td>
+                        
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/975/large/cardano.png?1547034860" 
+                            alt="coin-logo"></td>
+                        <td class="td-name">Bitcoin</td>
+                        <td class="td-shortName">BTC</td>
+                        <td class="td-per">3.79%</td>
+                        <td class="td-price">$20023</td>
+                        <td class="td-price1">28,534,462,145</td>
+                        
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/13442/large/steth_logo.png?1608607546"
+                             alt="coin-logo"></td>
+                        <td class="td-name">Ethereum</td>
+                        <td class="td-shortName">ETH</td>
+                        <td class="td-per">3.79%</td>
+                        <td class="td-price">$20023</td>
+                        <td class="td-price1">28,534,462,145</td>
+                       
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" 
+                            alt="coin-logo"></td>
+                        <td class="td-name">Bitcoin</td>
+                        <td class="td-shortName">BTC</td>
+                        <td class="td-per">3.79%</td>
+                        <td class="td-price">$20023</td>
+                        <td class="td-price1">28,534,462,145</td>
+                       
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr>
+
+                    <tr  class="column">
+                        <td class="td-img"><img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880"
+                             alt="coin-logo"></td>
+                        <td class="td-name">Ethereum</td>
+                        <td class="td-shortName">ETH</td>
+                        <td class="td-per">3.79%</td>
+                        <td class="td-price">$20023</td>
+                        <td class="td-price1">28,534,462,145</td>
+                        
+                        <td class="td-mktCap">$382,801,405,357</td>
+                    </tr> 
+               </tbody>
+            </table>
+        </div>
+    </main>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
